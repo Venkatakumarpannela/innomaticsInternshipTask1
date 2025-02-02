@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget_Tracker</title>
+    <style>
+        .main{
+            margin: 20px ; 
+            background-color:  #f0f0f0;
+
+        }
+        .head,.foot{
+            background:black; 
+            color: white;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+    
+            
+        }
+        .info, .body, .table{
+            background-color: white;
+            margin:30px;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px black solid;
+            text-align: center;
+        }
+    
+        #butenter{
+            background-color: #28a745;
+            color:white;
+            border-radius: 3px;
+            border: none;
+            cursor: pointer;
+        }
+        #butenter:hover{
+            background-color: black;
+        }
+        .bookmark{
+            border-radius: 3px;
+            border: none;
+            
+        }
+        .bookmark a{
+            text-decoration: none;
+        }
+        
+        
+
+
+    </style>
+
+
+</head>
+
+<body >
+    <div class="main">
+        <div class="head">
+            <h1>Personal Budget Tracker</h1>
+            <button class="bookmark"><a href="#transaction">Add Income/Expences</a></button>
+            <button class="bookmark"><a href="#summary">View Summary</a></button>
+        </div>
+        <div class="info">
+                <h2>Welcome to the personal Budget Tracker</h2>
+                <p>This Tracker Helps to the manage your monthly income and expences. You can add new entries and view a detailed summary of your Budget</p>
+        </div>
+
+        <div class="body" >
+            <form>
+                <fieldset>
+                    <legend>Add Income/Expances</legend>
+
+                    <label for="Income">Ammount: 
+                    <input type="number" id ="Amount" placeholder="enter your ammount"></label><br><br>
+
+                
+                    <label for="Des">Description: 
+                    <input type="text" id = "Des" placeholder="enter your Description"></label><br><br>
+
+
+
+                    <label for="cat">Category: 
+                    <select>
+                        <option>Food</option>
+                        <option>Cloths</option>
+                        <option>Rent</option>
+                        <option>EMI</option>
+                        <option>Transfortation</option>
+                        <option>Salary</option>
+                    </select></label><br><br>
+
+                    
+                    <label>Date:
+                        <input type="date" name="Date" value="date">
+                    </label><br><br>
+
+                    <label>Type:
+                        <input type="radio" name="type" value="Income" required> Income
+                        <input type="radio" name="type" value="Expense"> Expense
+                    </label><br><br>
+                    <button id="butenter" id="#transaction">Add Enty</button>
+
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="table" id="summary">
+            <table border="2px" align="center">
+                <tr>
+                    <th rowspan="2">Category</th>
+                    <th colspan="2">Transaction Details</th>
+                    <th rowspan="2">status</th>
+                    <th rowspan="2">Action</th>
+                </tr>
+                <tr>
+                    <th>Ammount</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Food</td>
+                    <td>$200</td>
+                    <td>Groceries for this week</td>
+                    <td>Completed</td>
+                    <td><button class="but">Edit</button>&nbsp;<button calss="but">Delete</button></td>
+                </tr>
+                <tr>
+                    <td>Transportation</td>
+                    <td>$100</td>
+                    <td>Monthly Bus PAss</td>
+                    <td>Completed</td>
+                    <td><button class="but">Edit</button>&nbsp;<button calss="but">Delete</button></td>
+                </tr>
+                <tr>
+                    <td>Entertainment</td>
+                    <td>$50</td>
+                    <td>Movie Tickets</td>
+                    <td>Completed</td>
+                    <td><button class="but">Edit</button>&nbsp;<button calss="but">Delete</button></td>
+                </tr>
+                <tr>
+                    <td>Salary</td>
+                    <td>$3000</td>
+                    <td>Monthly salary Payment</td>
+                    <td>Completed</td>
+                    <td><button class="but">Edit</button>&nbsp;<button calss="but">Delete</button></td>
+                </tr>
+                <tr>
+                    <td>Savings</td>
+                    <td>$500</td>
+                    <td>emergency Deposite fund</td>
+                    <td>Pending</td>
+                    <td><button class="but">Edit</button>&nbsp;<button calss="but">Delete</button></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">utilities</td>
+                    <td>$150</td>
+                    <td>Electricity bill</td>
+                    <td>Completed</td>
+                    <td><button class="but">Edit</button>&nbsp;<button calss="but">Delete</button></td>
+                </tr>
+                <tr>
+                    
+                    <td>$50</td>
+                    <td>Water bill</td>
+                    <td>Pending</td>
+                    <td><button class="but">Edit</button>&nbsp;<button calss="but">Delete</button></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Housing</td>
+                    <td>$1200</td>
+                    <td>Monthly rent</td>
+                    <td>Completed</td>
+                    <td><button class="but">Edit</button>&nbsp;<button calss="but">Delete</button></td>
+                </tr>
+                <tr>
+                    <td>$300</td>
+                    <td>Maintenance fee</td>
+                    <td>Pending</td>
+                    <td><button id="but">Edit</button>&nbsp;<button calss="but">Delete</button></td>
+                </tr>
+            </table>
+        </div>   
+        <div class="foot">
+            <h2>@Personal Buget Tracker 2025</h2>
+        </div>     
+
+    </div>
+    
+</body>
+</html>
